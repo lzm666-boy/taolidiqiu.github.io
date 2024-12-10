@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生社团管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>学生社团管理系统</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="intro">
+            <h2>社团简介</h2>
+            <p id="club-description">这里是社团简介内容，您可以在后台修改此处信息。</p>
+            <button onclick="editDescription()">编辑简介</button>
+        </section>
+
+        <section id="members">
+            <h2>成员信息</h2>
+            <table id="member-table">
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>学号</th>
+                        <th>联系方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 动态渲染成员 -->
+                </tbody>
+            </table>
+            <button onclick="addMember()">添加成员</button>
+        </section>
+
+        <section id="activities">
+            <h2>活动预约</h2>
+            <form id="booking-form">
+                <label for="name">姓名:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="activity">选择活动:</label>
+                <select id="activity" name="activity" required></select>
+                <button type="submit">预约</button>
+            </form>
+        </section>
+
+        <section id="announcements">
+            <h2>活动预告</h2>
+            <div id="activity-list">
+                <!-- 动态渲染活动 -->
+            </div>
+            <button onclick="addActivity()">发布新活动</button>
+        </section>
+
+        <section id="leave-request">
+            <h2>假条申请</h2>
+            <form id="leave-form">
+                <label for="student-name">姓名:</label>
+                <input type="text" id="student-name" name="student-name" required>
+                <label for="reason">请假理由:</label>
+                <textarea id="reason" name="reason" required></textarea>
+                <button type="submit">提交申请</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 学生社团管理系统</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
